@@ -21,8 +21,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1.Navigate to /login to log in with the credentials:
 
-Username: dhanalakshmi
-Password: Admin@123
+Username: dhanalakshmi ,, Password: Admin@123
 
 2.Access /home to perform CRUD operations on posts.
 
