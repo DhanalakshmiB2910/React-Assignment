@@ -20,14 +20,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 **Usage**
 
 1.Navigate to /login to log in with the credentials:
+
 Username: dhanalakshmi
 Password: Admin@123
+
 2.Access /home to perform CRUD operations on posts.
+
 3.Visit /about for project and author information.
+
 4.Use /logout to log out and return to login page.
 
 Notes:
 
 ~This project uses functional components and React Hooks.
+
 ~All CRUD operations interact with JSONPlaceholder mock API.
+
 ~Designed to be fully responsive and user-friendly.
