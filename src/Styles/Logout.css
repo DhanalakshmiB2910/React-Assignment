@@ -1,0 +1,46 @@
+/* ===== Logout.css ===== */
+
+.logout-page {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.logout-page h2 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.logout-page p {
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+button .icon-button {
+  font-size: 1.2rem;
+}
+
+/* Animation for slide out */
+.logout-page {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.logout-page.slide-out {
+  transform: translateY(-50px); /* slide up */
+  opacity: 0; /* fade out */
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container.card {
+    padding: 20px 15px;
+  }
+
+  .logout-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .logout-page p {
+    font-size: 0.9rem;
+  }
+}

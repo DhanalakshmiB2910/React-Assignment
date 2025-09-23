@@ -1,0 +1,198 @@
+.home-page {
+  padding: 100px 20px 40px; /* extra top padding for fixed navbar */
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+.home-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* Form */
+.home-page form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.home-page input {
+  flex: 1 1 45%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.home-page button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2c974b;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.home-page button:hover {
+  background-color: #074c1bd0;
+}
+
+/* Icons for inputs and posts */
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-icon .icon {
+  position: absolute;
+  left: 10px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.input-icon input {
+  padding-left: 35px;
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+/* Post list icons */
+.list-icon {
+  margin-right: 10px;
+  color: var(--primary-color);
+  vertical-align: middle;
+}
+
+button .icon-button {
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.1rem;
+}
+
+/* Posts List */
+.home-page ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.home-page li {
+  background-color: rgba(36, 41, 47, 0.85);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+}
+
+.edit-form input {
+  margin-right: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.post-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.post-actions button {
+  background-color: #2ea44f;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.post-actions button:nth-child(2) {
+  background-color: #f85149;
+}
+
+.post-actions button:hover {
+  opacity: 0.85;
+}
+
+.home-page li h4 {
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.home-page li p {
+  margin: 0 0 12px;
+  color: #ddd;
+}
+
+.home-page li button {
+  background-color: #d73a49;
+}
+
+.home-page li button:hover {
+  background-color: #b92534;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #58a6ff;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 80px 15px;
+  }
+
+  .home-page form {
+    flex-direction: column;
+  }
+
+  .home-page input {
+    flex: 1 1 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin: 8px 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-page li {
+    padding: 10px;
+  }
+
+  .home-page button {
+    width: 100%;
+  }
+}
