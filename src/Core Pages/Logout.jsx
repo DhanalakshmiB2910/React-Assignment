@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../Styles/Logout.css";
 import { useNavigate } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";

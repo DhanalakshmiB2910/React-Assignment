@@ -2,7 +2,6 @@ import Login from "./Core Pages/Login";
 import Home from "./Core Pages/Home";
 import About from "./Core Pages/About";
 import Logout from "./Core Pages/Logout";
-
 import {
   BrowserRouter as Router,
   Route,
@@ -18,6 +17,7 @@ const App = () => {
   return (
     <>
       <div className="app-container">
+        {/* Define all application routes */}
         <Router>
           <Routes>
             <Route

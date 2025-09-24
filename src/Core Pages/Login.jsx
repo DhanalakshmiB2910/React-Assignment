@@ -5,6 +5,7 @@ import RegexValidation from "../Components/RegexValidation";
 import "../Styles/Login.css";
 
 const Login = ({ setIsLoggedIn }) => {
+  // Local state for username, password, and error messages
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordValid, setIsPasswordValid] = useState(false);
@@ -18,12 +19,17 @@ const Login = ({ setIsLoggedIn }) => {
     if (error) setError("");
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Simple validation: fields must not be empty
     if (!username || !password) {
       setError("Both fields are required");
       return;
     }
+
+    // Check if password meets criteria
     if (!isPasswordValid) {
       setError("Password does not meet the criteria");
       return;
@@ -40,6 +46,7 @@ const Login = ({ setIsLoggedIn }) => {
       setUsername("");
       setPassword("");
       setError("");
+      // If validation passes → navigate to Home
       navigate("/home");
     } else {
       setError("Invalid username or password");
@@ -51,6 +58,7 @@ const Login = ({ setIsLoggedIn }) => {
       <h2>Login to view the React Assignment</h2>
       <hr></hr>
       <h2>Login</h2>
+      {/* Login Form */}
       <form onSubmit={handleSubmit} className="login-form-inner">
         <label htmlFor="username">Username:</label>
         <div className="input-icon">

@@ -5,12 +5,15 @@ import PostList from "../Components/PostList";
 import "../Styles/Home.css";
 
 function Home() {
+  // State for all posts
   const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  // Track post being edited
   const [editId, setEditId] = useState(null);
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
+  // Loading state
   const [loading, setLoading] = useState(true);
 
   // Fetch posts on mount
@@ -23,7 +26,7 @@ function Home() {
       .finally(() => setLoading(false));
   }, []);
 
-  // CRUD operations
+  // Add new post (POST)
   const handleAddPost = (e) => {
     e.preventDefault();
     if (!title || !body) return;
@@ -41,6 +44,7 @@ function Home() {
       .catch((err) => console.error(err));
   };
 
+  // Delete post (DELETE)
   const handleDelete = (id) => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
       method: "DELETE",
@@ -49,18 +53,22 @@ function Home() {
       .catch((err) => console.error(err));
   };
 
+  // Update post (PUT)
+  // Enable edit mode
   const handleEdit = (post) => {
     setEditId(post.id);
     setEditTitle(post.title);
     setEditBody(post.body);
   };
 
+  // Cancel editing
   const handleCancelEdit = () => {
     setEditId(null);
     setEditTitle("");
     setEditBody("");
   };
 
+  // Save updated post
   const handleSaveEdit = (id) => {
     if (!editTitle || !editBody) return;
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -89,6 +97,7 @@ function Home() {
         handleAddPost={handleAddPost}
       />
 
+      {/* Show loading until posts are fetched */}
       {loading ? (
         <div className="loading">Loading posts...</div>
       ) : (

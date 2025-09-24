@@ -18,6 +18,7 @@ const PostList = ({
         <li key={post.id}>
           {editId === post.id ? (
             <div className="edit-form">
+              {/* Edit mode */}
               <input
                 type="text"
                 value={editTitle}
@@ -38,6 +39,7 @@ const PostList = ({
           ) : (
             <>
               <h4>
+                {/* View mode */}
                 <FiFileText className="list-icon" /> {post.title}
               </h4>
               <p>{post.body}</p>

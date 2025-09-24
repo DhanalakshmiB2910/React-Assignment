@@ -15,6 +15,7 @@ const About = () => {
 
       <div>
         <strong>Technologies Used:</strong>
+        <br /> <br/>
         <ul>
           <li>
             <FaReact className="list-icon" /> React (Functional Components +
