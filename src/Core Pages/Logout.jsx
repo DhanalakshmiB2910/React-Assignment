@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../Styles/Logout.css";
 import { useNavigate } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
@@ -7,6 +7,7 @@ const Logout = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
   const [animate, setAnimate] = useState(false);
 
+  // Handle login redirection with animation
   const handleLoginRedirect = () => {
     setAnimate(true);
     setTimeout(() => {

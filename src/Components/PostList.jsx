@@ -18,6 +18,7 @@ const PostList = ({
         <li key={post.id}>
           {editId === post.id ? (
             <div className="edit-form">
+              {/* Edit mode */}
               <input
                 type="text"
                 value={editTitle}
@@ -28,6 +29,7 @@ const PostList = ({
                 value={editBody}
                 onChange={(e) => setEditBody(e.target.value)}
               />
+              {/* Save and Cancel buttons */}
               <button onClick={() => handleSaveEdit(post.id)}>
                 <FiSave className="icon-button" /> Save
               </button>
@@ -38,10 +40,12 @@ const PostList = ({
           ) : (
             <>
               <h4>
+                {/* View mode */}
                 <FiFileText className="list-icon" /> {post.title}
               </h4>
               <p>{post.body}</p>
               <div className="post-actions">
+                {/* Edit and Delete buttons */}
                 <button onClick={() => handleEdit(post)}>
                   <FiEdit className="icon-button" /> Edit
                 </button>
