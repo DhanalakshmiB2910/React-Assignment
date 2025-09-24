@@ -53,8 +53,7 @@ function Home() {
       .catch((err) => console.error(err));
   };
 
-  // Update post (PUT)
-  // Enable edit mode
+  // Update post (PUT)-  Enable edit mode
   const handleEdit = (post) => {
     setEditId(post.id);
     setEditTitle(post.title);

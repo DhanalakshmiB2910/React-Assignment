@@ -29,6 +29,7 @@ const PostList = ({
                 value={editBody}
                 onChange={(e) => setEditBody(e.target.value)}
               />
+              {/* Save and Cancel buttons */}
               <button onClick={() => handleSaveEdit(post.id)}>
                 <FiSave className="icon-button" /> Save
               </button>
@@ -44,6 +45,7 @@ const PostList = ({
               </h4>
               <p>{post.body}</p>
               <div className="post-actions">
+                {/* Edit and Delete buttons */}
                 <button onClick={() => handleEdit(post)}>
                   <FiEdit className="icon-button" /> Edit
                 </button>

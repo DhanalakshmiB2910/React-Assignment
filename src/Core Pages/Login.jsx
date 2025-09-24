@@ -5,7 +5,7 @@ import RegexValidation from "../Components/RegexValidation";
 import "../Styles/Login.css";
 
 const Login = ({ setIsLoggedIn }) => {
-  // Local state for username, password, and error messages
+  // Local state for username, password, and error messages handling
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordValid, setIsPasswordValid] = useState(false);
